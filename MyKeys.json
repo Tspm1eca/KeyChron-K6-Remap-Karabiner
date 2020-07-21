@@ -152,7 +152,7 @@
             ]
         },
         {
-            "description": "[Caps Lock + I/J/K/L] to [Arrow Keys] | [caps_lock + P/;] to [CMD + -> / <-]",
+            "description": "[Caps Lock + I/J/K/L] to [Arrow Keys] | [caps_lock + P/;] to [CMD + -> / <-] | [caps_lock + [/;'] to [option + -> / <-]",
             "manipulators": [
                 {
                     "from": {
@@ -325,11 +325,63 @@
                         }
                     ],
                     "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_arrows_mode",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_arrows_mode",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
                 }
             ]
         },
         {
-            "description": "[Shift + esc] to [CMD + ~]",
+            "description": "[option+ esc] to [CMD + ~]",
             "manipulators": [
                 {
                     "type": "basic",
@@ -337,7 +389,7 @@
                         "key_code": "escape",
                         "modifiers": {
                             "mandatory": [
-                                "left_shift"
+                                "left_option"
                             ],
                             "optional": [
                                 "any"
