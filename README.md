@@ -7,6 +7,7 @@ Remap Keys with Karabiner
 - PgDn -> End
 - Delete -> PgUp
 - End -> PgDn
+- Option + "esc" -> CMD + ~
 
 ## Custom Combinations
 
@@ -16,3 +17,6 @@ Remap Keys with Karabiner
 - CapsLock + "l" -> Right
 - CapsLock + "p" -> CMD + <
 - CapsLock + ";" -> CMD + >
+- CapsLock + "[" -> option + <
+- CapsLock + "'" -> option + >
+
